@@ -32,25 +32,25 @@ export function Gallery() {
 
   return (
     <>
-      <section className="py-16 bg-secondary">
+      <section className="py-10 sm:py-12 md:py-16 px-4 md:px-6 bg-secondary">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-4">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <span className="inline-block bg-primary/10 text-primary font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm mb-3 sm:mb-4">
               Nosso trabalho
             </span>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6">
               Galeria de atuação
             </h2>
-            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
               Conheça alguns dos nossos serviços em ação
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
+                className="relative aspect-square overflow-hidden rounded-lg sm:rounded-xl cursor-pointer group"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => openLightbox(index)}
