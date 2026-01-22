@@ -72,7 +72,7 @@ export function Hero() {
                 onClick={handleScrollToServices}
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
+                className="bg-white/20 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6"
               >
                 Nossos serviços
               </Button>
