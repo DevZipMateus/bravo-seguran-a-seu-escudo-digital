@@ -127,7 +127,7 @@ export function Services() {
         </div>
 
         {/* Security Services */}
-        <div className="mb-20">
+        <div className="mb-12">
           <h3 className="font-heading text-2xl md:text-3xl text-foreground text-center mb-10">
             Segurança eletrônica e monitoramento
           </h3>
@@ -144,6 +144,25 @@ export function Services() {
                 <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Image showcase between sections */}
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <img src="/midia_4.jpg" alt="Segurança eletrônica" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Monitoramento 24h</span>
+          </div>
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <img src="/midia_7.jpg" alt="Equipe profissional" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Equipe qualificada</span>
+          </div>
+          <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
+            <img src="/midia_8.jpg" alt="Facilities" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+            <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Facilities completo</span>
           </div>
         </div>
 

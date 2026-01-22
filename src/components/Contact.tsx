@@ -32,17 +32,25 @@ export function Contact() {
   return (
     <section id="contato" className="section-padding bg-background">
       <div className="container-custom">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
-            Contato
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-            Entre em contato conosco
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Estamos prontos para atender você e apresentar as melhores soluções em segurança
-          </p>
+        {/* Section header with decorative image */}
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-16">
+          <div>
+            <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
+              Contato
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+              Entre em contato conosco
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Estamos prontos para atender você e apresentar as melhores soluções em segurança
+            </p>
+          </div>
+          <div className="hidden lg:block">
+            <div className="relative h-48 rounded-2xl overflow-hidden">
+              <img src="/midia_9.jpg" alt="Atendimento Bravo" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-r from-accent/50 to-transparent" />
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
