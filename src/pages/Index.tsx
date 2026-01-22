@@ -2,6 +2,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { About } from '@/components/About';
 import { Services } from '@/components/Services';
+import { ImageDivider } from '@/components/ImageDivider';
 import { Gallery } from '@/components/Gallery';
 import { Plans } from '@/components/Plans';
 import { CTABanner } from '@/components/CTABanner';
@@ -16,6 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <About />
+        <ImageDivider images={['/midia_3.jpg', '/midia_4.jpg', '/midia_5.jpg', '/midia_6.jpg', '/midia_7.jpg', '/midia_8.jpg']} />
         <Services />
         <Gallery />
         <Plans />

@@ -64,17 +64,25 @@ export function Plans() {
   return (
     <section id="planos" className="section-padding bg-secondary">
       <div className="container-custom">
-        {/* Section header */}
-        <div className="text-center mb-16">
-          <span className="inline-block bg-primary/10 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-4">
-            Planos
-          </span>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-            Escolha o plano ideal para você
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Oferecemos diversas opções de planos para atender às suas necessidades de segurança
-          </p>
+        {/* Section header with background image */}
+        <div className="relative rounded-2xl overflow-hidden mb-16 py-12 px-6">
+          <img 
+            src="/midia_3.jpg" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/85" />
+          <div className="relative z-10 text-center">
+            <span className="inline-block bg-white/20 text-white font-semibold px-4 py-2 rounded-full text-sm mb-4">
+              Planos
+            </span>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white mb-6">
+              Escolha o plano ideal para você
+            </h2>
+            <p className="text-white/90 text-lg max-w-3xl mx-auto">
+              Oferecemos diversas opções de planos para atender às suas necessidades de segurança
+            </p>
+          </div>
         </div>
 
         {/* Plans grid */}
