@@ -1,17 +1,17 @@
 import securityMonitoring from '@/assets/security-monitoring.jpg';
 import facilitiesCleaning from '@/assets/facilities-cleaning.jpg';
 import securityPatrol from '@/assets/security-patrol.jpg';
-import perimeterSecurity from '@/assets/perimeter-security.jpg';
-import receptionService from '@/assets/reception-service.jpg';
-import gardeningService from '@/assets/gardening-service.jpg';
+import vehicleTracking from '@/assets/vehicle-tracking.jpg';
+import alarmSystem from '@/assets/alarm-system.jpg';
+import electricFence from '@/assets/electric-fence.jpg';
 
 const dividerImages = [
   { src: securityMonitoring, alt: 'Central de monitoramento' },
-  { src: securityPatrol, alt: 'Vigilância patrimonial' },
+  { src: alarmSystem, alt: 'Sistema de alarme' },
   { src: facilitiesCleaning, alt: 'Limpeza predial' },
-  { src: perimeterSecurity, alt: 'Segurança perimetral' },
-  { src: receptionService, alt: 'Portaria e recepção' },
-  { src: gardeningService, alt: 'Jardinagem' },
+  { src: electricFence, alt: 'Cerca elétrica' },
+  { src: securityPatrol, alt: 'Vigilância patrimonial' },
+  { src: vehicleTracking, alt: 'Rastreamento veicular' },
 ];
 
 export function ImageDivider() {
