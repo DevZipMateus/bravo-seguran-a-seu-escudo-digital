@@ -99,11 +99,14 @@ export function Hero() {
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl scale-110" />
-              <img 
-                src={logoBravo} 
-                alt="Bravo Segurança - Proteção e confiança" 
-                className="relative w-80 h-auto animate-float drop-shadow-2xl"
-              />
+              <div className="relative w-80 h-80 flex items-center justify-center">
+                <div className="absolute inset-0 bg-white rounded-full shadow-2xl" />
+                <img 
+                  src={logoBravo} 
+                  alt="Bravo Segurança - Proteção e confiança" 
+                  className="relative w-64 h-auto animate-float drop-shadow-lg z-10"
+                />
+              </div>
             </div>
           </div>
         </div>
