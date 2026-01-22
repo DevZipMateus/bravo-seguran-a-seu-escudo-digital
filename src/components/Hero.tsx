@@ -1,5 +1,6 @@
-import { Shield, CheckCircle } from 'lucide-react';
+import { Shield, CheckCircle, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import heroBackground from '@/assets/hero-background.jpg';
 
 const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
@@ -78,6 +79,16 @@ export function Hero() {
                 className="bg-white/20 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6"
               >
                 Nossos serviços
+              </Button>
+              <Button 
+                asChild
+                size="lg"
+                className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary font-semibold text-lg px-8 py-6"
+              >
+                <Link to="/vitrine" className="flex items-center gap-2">
+                  <ShoppingBag className="w-5 h-5" />
+                  Ver Vitrine
+                </Link>
               </Button>
             </div>
 

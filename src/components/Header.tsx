@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, ShoppingBag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
+
 const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
+
 const navLinks = [{
   href: '#inicio',
   label: 'Início'
@@ -21,6 +24,9 @@ const navLinks = [{
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -30,6 +36,13 @@ export function Header() {
   }, []);
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
+    
+    // If not on home page, navigate to home first
+    if (!isHomePage) {
+      window.location.href = '/' + href;
+      return;
+    }
+    
     const element = document.querySelector(href);
     if (element) {
       const headerOffset = 80;
@@ -78,6 +91,13 @@ export function Header() {
           }} className="font-medium text-foreground transition-colors hover:text-accent">
                 {link.label}
               </a>)}
+            <Link 
+              to="/vitrine" 
+              className="flex items-center gap-2 font-medium text-accent transition-colors hover:text-accent/80"
+            >
+              <ShoppingBag className="w-4 h-4" />
+              Vitrine
+            </Link>
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-accent">
               <a href="https://wa.me/5551999294788" target="_blank" rel="noopener noreferrer">
                 Fale conosco
@@ -100,6 +120,14 @@ export function Header() {
           }} className="py-2 px-4 rounded-lg font-medium text-foreground hover:bg-muted transition-colors">
                   {link.label}
                 </a>)}
+              <Link 
+                to="/vitrine" 
+                className="py-2 px-4 rounded-lg font-medium text-accent hover:bg-muted transition-colors flex items-center gap-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <ShoppingBag className="w-4 h-4" />
+                Vitrine
+              </Link>
               <Button asChild className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 <a href="https://wa.me/5551999294788" target="_blank" rel="noopener noreferrer">
                   Fale conosco
