@@ -1,21 +1,26 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
-
-const navLinks = [
-  { href: '#inicio', label: 'Início' },
-  { href: '#sobre', label: 'Sobre' },
-  { href: '#servicos', label: 'Serviços' },
-  { href: '#planos', label: 'Planos' },
-  { href: '#contato', label: 'Contato' },
-];
-
+const navLinks = [{
+  href: '#inicio',
+  label: 'Início'
+}, {
+  href: '#sobre',
+  label: 'Sobre'
+}, {
+  href: '#servicos',
+  label: 'Serviços'
+}, {
+  href: '#planos',
+  label: 'Planos'
+}, {
+  href: '#contato',
+  label: 'Contato'
+}];
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -23,7 +28,6 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);
@@ -37,11 +41,7 @@ export function Header() {
       });
     }
   };
-
-  return (
-    <header
-      className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md"
-    >
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md">
       {/* Top bar */}
       <div className={`transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden' : 'bg-primary py-2'}`}>
         <div className="container-custom flex justify-center md:justify-end gap-4 md:gap-6 text-sm text-primary-foreground">
@@ -59,16 +59,11 @@ export function Header() {
       {/* Main nav */}
       <nav className="container-custom py-3 md:py-4">
         <div className="flex items-center justify-between">
-          <a 
-            href="#inicio" 
-            onClick={(e) => { e.preventDefault(); handleNavClick('#inicio'); }}
-            className="flex items-center gap-3"
-          >
-            <img 
-              src={logoBravo} 
-              alt="Bravo Segurança - Logo" 
-              className="h-12 md:h-16 w-auto"
-            />
+          <a href="#inicio" onClick={e => {
+          e.preventDefault();
+          handleNavClick('#inicio');
+        }} className="flex items-center gap-3">
+            <img src={logoBravo} alt="Bravo Segurança - Logo" className="h-20 md:h-16 w-auto" />
             <div className="hidden lg:block text-foreground">
               <span className="font-heading font-bold text-lg">Bravo</span>
               <span className="block text-xs opacity-80">Segurança</span>
@@ -77,20 +72,13 @@ export function Header() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                className="font-medium text-foreground transition-colors hover:text-accent"
-              >
+            {navLinks.map(link => <a key={link.href} href={link.href} onClick={e => {
+            e.preventDefault();
+            handleNavClick(link.href);
+          }} className="font-medium text-foreground transition-colors hover:text-accent">
                 {link.label}
-              </a>
-            ))}
-            <Button 
-              asChild
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-accent"
-            >
+              </a>)}
+            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-accent">
               <a href="https://wa.me/5551999294788" target="_blank" rel="noopener noreferrer">
                 Fale conosco
               </a>
@@ -98,41 +86,27 @@ export function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
-            aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
-          >
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors" aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}>
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border/20">
+        {isMobileMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-border/20">
             <div className="flex flex-col gap-2 pt-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                  className="py-2 px-4 rounded-lg font-medium text-foreground hover:bg-muted transition-colors"
-                >
+              {navLinks.map(link => <a key={link.href} href={link.href} onClick={e => {
+            e.preventDefault();
+            handleNavClick(link.href);
+          }} className="py-2 px-4 rounded-lg font-medium text-foreground hover:bg-muted transition-colors">
                   {link.label}
-                </a>
-              ))}
-              <Button 
-                asChild
-                className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-              >
+                </a>)}
+              <Button asChild className="mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                 <a href="https://wa.me/5551999294788" target="_blank" rel="noopener noreferrer">
                   Fale conosco
                 </a>
               </Button>
             </div>
-          </div>
-        )}
+          </div>}
       </nav>
-    </header>
-  );
+    </header>;
 }
