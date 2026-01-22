@@ -1,4 +1,5 @@
 import { Target, Eye, Heart, Award, Users, Clock } from 'lucide-react';
+import receptionService from '@/assets/reception-service.jpg';
 
 const values = [
   { icon: Award, title: 'Qualidade', description: 'Excelência em cada serviço prestado' },
@@ -49,8 +50,8 @@ export function About() {
           <div className="order-1 lg:order-2">
             <div className="relative rounded-2xl overflow-hidden shadow-card">
               <img 
-                src="/midia_6.jpg" 
-                alt="Equipe Bravo em ação" 
+                src={receptionService} 
+                alt="Recepção e portaria profissional" 
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />

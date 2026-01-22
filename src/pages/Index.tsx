@@ -17,7 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <About />
-        <ImageDivider images={['/midia_3.jpg', '/midia_4.jpg', '/midia_5.jpg', '/midia_6.jpg', '/midia_7.jpg', '/midia_8.jpg']} />
+        <ImageDivider />
         <Services />
         <Gallery />
         <Plans />
