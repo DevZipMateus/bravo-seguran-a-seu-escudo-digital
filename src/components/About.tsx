@@ -45,21 +45,33 @@ export function About() {
             </div>
           </div>
 
-          {/* Vision */}
-          <div className="order-1 lg:order-2 bg-card rounded-2xl p-8 shadow-card">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                <Eye className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-heading text-2xl text-foreground">Nossa visão</h3>
+          {/* Image */}
+          <div className="order-1 lg:order-2">
+            <div className="relative rounded-2xl overflow-hidden shadow-card">
+              <img 
+                src="/midia_6.jpg" 
+                alt="Equipe Bravo em ação" 
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Na Bravo LTDA, nossa visão é ser o seu parceiro de confiança em segurança e serviços, oferecendo soluções completas e integradas que garantem a tranquilidade de sua família, patrimônio e negócios.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Atuamos com base em pilares inegociáveis: <span className="text-primary font-semibold">Qualidade</span>, <span className="text-primary font-semibold">Eficiência</span> e <span className="text-primary font-semibold">Comprometimento</span>, assegurando que cada serviço prestado exceda as expectativas de nossos clientes.
-            </p>
           </div>
+        </div>
+
+        {/* Vision Card */}
+        <div className="bg-card rounded-2xl p-8 shadow-card mb-20">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+              <Eye className="w-7 h-7 text-primary" />
+            </div>
+            <h3 className="font-heading text-2xl text-foreground">Nossa visão</h3>
+          </div>
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            Na Bravo LTDA, nossa visão é ser o seu parceiro de confiança em segurança e serviços, oferecendo soluções completas e integradas que garantem a tranquilidade de sua família, patrimônio e negócios.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Atuamos com base em pilares inegociáveis: <span className="text-primary font-semibold">Qualidade</span>, <span className="text-primary font-semibold">Eficiência</span> e <span className="text-primary font-semibold">Comprometimento</span>, assegurando que cada serviço prestado exceda as expectativas de nossos clientes.
+          </p>
         </div>
 
         {/* Values */}
