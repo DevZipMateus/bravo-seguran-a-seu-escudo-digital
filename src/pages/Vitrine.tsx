@@ -27,14 +27,15 @@ const Vitrine = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden flex flex-col">
-      {/* Header fixo - 80px */}
-      <div className="h-20 flex-shrink-0">
-        <Header />
-      </div>
+    <div className="min-h-screen w-full overflow-hidden flex flex-col">
+      {/* Header */}
+      <Header />
       
-      {/* Iframe - altura calculada: 100vh - 80px (header) */}
-      <div className="flex-1" style={{ height: 'calc(100vh - 80px)' }}>
+      {/* Spacer para compensar o header fixo (top bar ~40px + nav ~104px = ~144px) */}
+      <div className="flex-shrink-0" style={{ height: '144px' }} />
+      
+      {/* Iframe - ocupa o restante da tela */}
+      <div className="flex-1 w-full" style={{ height: 'calc(100vh - 144px)' }}>
         <iframe 
           src="https://beckeredelimavaz.egestor.com.br/vitrine/"
           className="w-full h-full border-none"
