@@ -40,11 +40,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-md shadow-primary' 
-          : 'bg-transparent'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-background shadow-md"
     >
       {/* Top bar */}
       <div className={`transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden' : 'bg-primary py-2'}`}>
@@ -73,7 +69,7 @@ export function Header() {
               alt="Bravo Segurança - Logo" 
               className="h-12 md:h-16 w-auto"
             />
-            <div className={`hidden lg:block transition-colors ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+            <div className="hidden lg:block text-foreground">
               <span className="font-heading font-bold text-lg">Bravo</span>
               <span className="block text-xs opacity-80">Segurança</span>
             </div>
@@ -86,9 +82,7 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                className={`font-medium transition-colors hover:text-accent ${
-                  isScrolled ? 'text-foreground' : 'text-primary-foreground'
-                }`}
+                className="font-medium text-foreground transition-colors hover:text-accent"
               >
                 {link.label}
               </a>
@@ -106,9 +100,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-foreground hover:bg-muted' : 'text-primary-foreground hover:bg-primary-foreground/10'
-            }`}
+            className="md:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors"
             aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -124,11 +116,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                  className={`py-2 px-4 rounded-lg font-medium transition-colors ${
-                    isScrolled 
-                      ? 'text-foreground hover:bg-muted' 
-                      : 'text-primary-foreground hover:bg-primary-foreground/10'
-                  }`}
+                  className="py-2 px-4 rounded-lg font-medium text-foreground hover:bg-muted transition-colors"
                 >
                   {link.label}
                 </a>
