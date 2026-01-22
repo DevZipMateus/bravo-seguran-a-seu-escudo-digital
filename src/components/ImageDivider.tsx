@@ -16,7 +16,7 @@ const dividerImages = [
 
 export function ImageDivider() {
   return (
-    <div className="grid grid-cols-3 md:grid-cols-6 h-32 md:h-48 overflow-hidden">
+    <div className="grid grid-cols-3 sm:grid-cols-6 h-24 sm:h-32 md:h-40 lg:h-48 overflow-hidden">
       {dividerImages.map((image, index) => (
         <div key={index} className="relative overflow-hidden">
           <img
