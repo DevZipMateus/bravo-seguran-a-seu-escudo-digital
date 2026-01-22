@@ -21,8 +21,8 @@ const Vitrine = () => {
         <Header />
       </div>
       
-      {/* Iframe - altura calculada: 100vh - 80px (header) - 63px (badge) */}
-      <div className="flex-1" style={{ height: 'calc(100vh - 80px - 63px)' }}>
+      {/* Iframe - altura calculada: 100vh - 80px (header) */}
+      <div className="flex-1" style={{ height: 'calc(100vh - 80px)' }}>
         <iframe 
           src="https://beckeredelimavaz.egestor.com.br/vitrine/"
           className="w-full h-full border-none"
