@@ -109,17 +109,21 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Logo/Image */}
+          {/* Video */}
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl scale-110" />
-              <div className="relative w-80 h-80 flex items-center justify-center">
-                <div className="absolute inset-0 bg-white rounded-full shadow-2xl" />
-                <img 
-                  src={logoBravo} 
-                  alt="Bravo Segurança - Proteção e confiança" 
-                  className="relative w-64 h-auto drop-shadow-lg z-10"
-                />
+              <div className="absolute -inset-4 bg-accent/20 rounded-2xl blur-2xl" />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-[480px] h-[320px] object-cover"
+                >
+                  <source src="/midia_13.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos.
+                </video>
               </div>
             </div>
           </div>
