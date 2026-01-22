@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoBravo from '@/assets/logo-bravo.png';
+
+const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
 
 const navLinks = [
   { href: '#inicio', label: 'Início' },

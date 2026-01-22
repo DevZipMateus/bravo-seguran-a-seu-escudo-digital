@@ -1,6 +1,7 @@
 import { Shield, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logoBravo from '@/assets/logo-bravo.png';
+
+const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
 
 export function Hero() {
   const handleScrollToContact = () => {
