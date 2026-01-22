@@ -104,7 +104,7 @@ export function Hero() {
                 <img 
                   src={logoBravo} 
                   alt="Bravo Segurança - Proteção e confiança" 
-                  className="relative w-64 h-auto animate-float drop-shadow-lg z-10"
+                  className="relative w-64 h-auto drop-shadow-lg z-10"
                 />
               </div>
             </div>
