@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Shield } from 'lucide-react';
-import perimeterSecurity from '@/assets/perimeter-security.jpg';
+import receptionService from '@/assets/reception-service.jpg';
 
 export function CTABanner() {
   return (
     <section 
       className="relative py-20 bg-cover bg-center bg-fixed"
-      style={{ backgroundImage: `url(${perimeterSecurity})` }}
+      style={{ backgroundImage: `url(${receptionService})` }}
     >
       <div className="absolute inset-0 bg-primary/85" />
       

@@ -1,5 +1,5 @@
 import { Target, Eye, Heart, Award, Users, Clock } from 'lucide-react';
-import receptionService from '@/assets/reception-service.jpg';
+import gardeningService from '@/assets/gardening-service.jpg';
 
 const values = [
   { icon: Award, title: 'Qualidade', description: 'Excelência em cada serviço prestado' },
@@ -50,8 +50,8 @@ export function About() {
           <div className="order-1 lg:order-2">
             <div className="relative rounded-2xl overflow-hidden shadow-card">
               <img 
-                src={receptionService} 
-                alt="Recepção e portaria profissional" 
+                src={gardeningService} 
+                alt="Serviços de jardinagem e facilities" 
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />

@@ -17,9 +17,9 @@ import {
   Flame
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import securityMonitoring from '@/assets/security-monitoring.jpg';
-import facilitiesCleaning from '@/assets/facilities-cleaning.jpg';
-import securityPatrol from '@/assets/security-patrol.jpg';
+import cctvCamera from '@/assets/cctv-camera.jpg';
+import securityTeam from '@/assets/security-team.jpg';
+import maintenanceHvac from '@/assets/maintenance-hvac.jpg';
 
 const securityServices = [
   {
@@ -153,17 +153,17 @@ export function Services() {
         {/* Image showcase between sections */}
         <div className="grid md:grid-cols-3 gap-4 mb-12">
           <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
-            <img src={securityMonitoring} alt="Central de monitoramento" className="w-full h-full object-cover" />
+            <img src={cctvCamera} alt="Câmera CFTV" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
-            <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Monitoramento 24h</span>
+            <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Câmeras CFTV</span>
           </div>
           <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
-            <img src={securityPatrol} alt="Vigilância patrimonial" className="w-full h-full object-cover" />
+            <img src={securityTeam} alt="Equipe de segurança" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
             <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Equipe qualificada</span>
           </div>
           <div className="relative h-48 md:h-64 rounded-xl overflow-hidden">
-            <img src={facilitiesCleaning} alt="Limpeza e facilities" className="w-full h-full object-cover" />
+            <img src={maintenanceHvac} alt="Manutenção predial" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
             <span className="absolute bottom-4 left-4 text-white font-heading text-lg">Facilities completo</span>
           </div>
