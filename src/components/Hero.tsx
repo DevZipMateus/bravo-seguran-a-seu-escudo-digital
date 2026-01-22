@@ -119,7 +119,7 @@ export function Hero() {
                   muted 
                   loop 
                   playsInline
-                  className="w-[480px] h-[320px] object-cover"
+                  className="w-[600px] h-[400px] object-cover"
                 >
                   <source src="/midia_13.mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos.
