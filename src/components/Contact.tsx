@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import customerService from '@/assets/customer-service.jpg';
 
 const contactInfo = [
   {
@@ -47,7 +48,7 @@ export function Contact() {
           </div>
           <div className="hidden lg:block">
             <div className="relative h-48 rounded-2xl overflow-hidden">
-              <img src="/midia_9.jpg" alt="Atendimento Bravo" className="w-full h-full object-cover" />
+              <img src={customerService} alt="Atendimento ao cliente" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-accent/50 to-transparent" />
             </div>
           </div>

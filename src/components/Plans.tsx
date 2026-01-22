@@ -1,6 +1,6 @@
 import { Check, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import securityPlans from '@/assets/security-plans.jpg';
 const plans = [
   {
     name: 'Monitoramento consignado',
@@ -67,8 +67,8 @@ export function Plans() {
         {/* Section header with background image */}
         <div className="relative rounded-2xl overflow-hidden mb-16 py-12 px-6">
           <img 
-            src="/midia_3.jpg" 
-            alt="" 
+            src={securityPlans} 
+            alt="Planos de segurança" 
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/85" />
