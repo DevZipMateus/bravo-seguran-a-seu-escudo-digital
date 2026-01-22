@@ -1,0 +1,125 @@
+import { Phone, Mail, MapPin, Clock, Instagram } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const contactInfo = [
+  {
+    icon: Phone,
+    title: 'Telefones',
+    lines: ['(51) 2040-684', '(51) 99929-4788', '(51) 99929-4711'],
+    href: 'tel:51999294788',
+  },
+  {
+    icon: Mail,
+    title: 'E-mail',
+    lines: ['amauribravo2@gmail.com'],
+    href: 'mailto:amauribravo2@gmail.com',
+  },
+  {
+    icon: MapPin,
+    title: 'Endereço',
+    lines: ['R. França, 169', 'Dois Irmãos - RS'],
+    href: 'https://maps.app.goo.gl/qnUJrApWUPckEZFN6',
+  },
+  {
+    icon: Clock,
+    title: 'Horário de atendimento',
+    lines: ['Seg a Sex: 8h às 11:30', '13h às 18h'],
+    href: null,
+  },
+];
+
+export function Contact() {
+  return (
+    <section id="contato" className="section-padding bg-background">
+      <div className="container-custom">
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <span className="inline-block bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full text-sm mb-4">
+            Contato
+          </span>
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
+            Entre em contato conosco
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Estamos prontos para atender você e apresentar as melhores soluções em segurança
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact info */}
+          <div>
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="bg-card rounded-2xl p-6 shadow-card border border-border/50">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <info.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-heading text-lg text-foreground mb-2">{info.title}</h3>
+                  {info.href ? (
+                    <a 
+                      href={info.href}
+                      target={info.href.startsWith('http') ? '_blank' : undefined}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="block hover:text-primary transition-colors"
+                    >
+                      {info.lines.map((line, lineIndex) => (
+                        <p key={lineIndex} className="text-muted-foreground text-sm">{line}</p>
+                      ))}
+                    </a>
+                  ) : (
+                    info.lines.map((line, lineIndex) => (
+                      <p key={lineIndex} className="text-muted-foreground text-sm">{line}</p>
+                    ))
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Social */}
+            <div className="bg-card rounded-2xl p-6 shadow-card border border-border/50">
+              <h3 className="font-heading text-lg text-foreground mb-4">Redes sociais</h3>
+              <a 
+                href="https://instagram.com/bravo.ltda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+              >
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Instagram className="w-5 h-5 text-primary" />
+                </div>
+                <span>@bravo.ltda</span>
+              </a>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8">
+              <Button 
+                asChild
+                size="lg"
+                className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent"
+              >
+                <a href="https://wa.me/5551999294788" target="_blank" rel="noopener noreferrer">
+                  Falar pelo WhatsApp
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Map */}
+          <div className="h-[400px] lg:h-full min-h-[400px] rounded-2xl overflow-hidden shadow-card border border-border/50">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3466.4276!2d-51.0885!3d-29.5833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951943d8c0a82f8d%3A0x8a5c3c8c8c8c8c8c!2sR.%20Fran%C3%A7a%2C%20169%20-%20Dois%20Irm%C3%A3os%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Bravo Segurança - R. França, 169, Dois Irmãos, RS"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
