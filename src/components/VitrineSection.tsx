@@ -60,7 +60,7 @@ export function VitrineSection() {
             <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl">
               <img 
                 src={vitrineShowcase} 
-                alt="Vitrine de produtos Bravo Segurança" 
+                alt="Vitrine de produtos Bravo" 
                 className="w-full h-[280px] sm:h-[350px] md:h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />

@@ -41,7 +41,7 @@ export function Footer() {
             <a href="#inicio" onClick={(e) => { e.preventDefault(); handleNavClick('#inicio'); }} className="inline-block mb-4 sm:mb-6">
               <img 
                 src={logoBravo} 
-                alt="Bravo Segurança" 
+                alt="Bravo" 
                 className="h-14 sm:h-16 md:h-20 w-auto brightness-0 invert"
               />
             </a>

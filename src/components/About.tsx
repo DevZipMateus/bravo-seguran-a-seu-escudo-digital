@@ -20,7 +20,7 @@ export function About() {
             Quem somos
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-foreground mb-4 sm:mb-6">
-            Sobre a Bravo Segurança
+            Sobre a Bravo
           </h2>
           <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
             Desde 2010, oferecemos soluções completas em segurança e facilities com qualidade, eficiência e comprometimento
