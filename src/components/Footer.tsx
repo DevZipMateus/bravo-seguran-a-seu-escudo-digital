@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
-import logoBravo from '@/assets/logo-bravo.png';
+const logoBravo = '/1769040154965_logo_bravo_jpg-removebg-preview.png';
 
 const quickLinks = [
   { href: '#inicio', label: 'Início' },
