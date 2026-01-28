@@ -62,9 +62,9 @@ export function Header() {
             <Phone className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
             <span className="hidden xs:inline sm:inline">(51) 99929-4788</span>
           </a>
-          <a href="mailto:amauribravo2@gmail.com" className="flex items-center gap-1.5 sm:gap-2 hover:text-accent transition-colors">
+          <a href="mailto:comercial@segurancabravo.com.br" className="flex items-center gap-1.5 sm:gap-2 hover:text-accent transition-colors">
             <Mail className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-            <span className="hidden sm:inline">amauribravo2@gmail.com</span>
+            <span className="hidden sm:inline">comercial@segurancabravo.com.br</span>
           </a>
         </div>
       </div>
@@ -79,7 +79,6 @@ export function Header() {
             <img src={logoBravo} alt="Bravo Segurança - Logo" className="h-14 sm:h-16 md:h-20 lg:h-16 w-auto" />
             <div className="hidden lg:block text-foreground">
               <span className="font-heading font-bold text-lg">Bravo</span>
-              <span className="block text-xs opacity-80">Segurança</span>
             </div>
           </a>
 

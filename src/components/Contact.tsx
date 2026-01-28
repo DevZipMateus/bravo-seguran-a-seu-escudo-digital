@@ -11,9 +11,9 @@ const contactInfo = [
   },
   {
     icon: Mail,
-    title: 'E-mail',
-    lines: ['amauribravo2@gmail.com'],
-    href: 'mailto:amauribravo2@gmail.com',
+    title: 'E-mails',
+    lines: ['segu_bravo@hotmail.com', 'rh@segurancabravo.com.br', 'comercial@segurancabravo.com.br', 'licitacao@segurancabravo.com.br'],
+    href: 'mailto:comercial@segurancabravo.com.br',
   },
   {
     icon: MapPin,
@@ -87,17 +87,32 @@ export function Contact() {
             {/* Social */}
             <div className="bg-card rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-card border border-border/50">
               <h3 className="font-heading text-sm sm:text-base md:text-lg text-foreground mb-3 sm:mb-4">Redes sociais</h3>
-              <a 
-                href="https://instagram.com/bravo.ltda"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <div className="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Instagram className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
-                </div>
-                <span className="text-xs sm:text-sm">@bravo.ltda</span>
-              </a>
+              <div className="flex flex-col gap-3">
+                <a 
+                  href="https://instagram.com/bravo.ltda"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <div className="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Instagram className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
+                  </div>
+                  <span className="text-xs sm:text-sm">@bravo.ltda</span>
+                </a>
+                <a 
+                  href="https://facebook.com/bravoservices"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <div className="w-8 sm:w-9 md:w-10 h-8 sm:h-9 md:h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <svg className="w-4 sm:w-5 h-4 sm:h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </div>
+                  <span className="text-xs sm:text-sm">Bravo Services</span>
+                </a>
+              </div>
             </div>
 
             {/* CTA */}

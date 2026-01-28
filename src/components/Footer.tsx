@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 import logoBravo from '@/assets/logo-bravo.png';
 
 const quickLinks = [
@@ -94,9 +94,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:amauribravo2@gmail.com" className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm">
+                <a href="mailto:comercial@segurancabravo.com.br" className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm">
                   <Mail className="w-3.5 sm:w-4 h-3.5 sm:h-4 flex-shrink-0" />
-                  <span className="break-all">amauribravo2@gmail.com</span>
+                  <span className="break-all">comercial@segurancabravo.com.br</span>
                 </a>
               </li>
               <li>
@@ -121,6 +121,17 @@ export function Footer() {
                   <span>@bravo.ltda</span>
                 </a>
               </li>
+              <li>
+                <a 
+                  href="https://facebook.com/bravoservices" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm"
+                >
+                  <Facebook className="w-3.5 sm:w-4 h-3.5 sm:h-4 flex-shrink-0" />
+                  <span>Bravo Services</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -128,7 +139,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-6 sm:pt-8 border-t border-primary-foreground/20 text-center">
           <p className="text-primary-foreground/60 text-[10px] sm:text-xs md:text-sm">
-            © {new Date().getFullYear()} Bravo Segurança. Todos os direitos reservados.
+            © {new Date().getFullYear()} Bravo. Todos os direitos reservados.
           </p>
         </div>
       </div>
