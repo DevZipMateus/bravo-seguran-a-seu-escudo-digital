@@ -57,7 +57,7 @@ export function Hero() {
             </div>
 
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 sm:mb-6 leading-tight">
-              Bravo Segurança
+              Bravo
             </h1>
 
             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary-foreground/90 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0">
