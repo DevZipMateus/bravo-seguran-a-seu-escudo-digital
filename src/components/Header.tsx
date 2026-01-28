@@ -76,7 +76,7 @@ export function Header() {
           e.preventDefault();
           handleNavClick('#inicio');
         }} className="flex items-center gap-2 sm:gap-3">
-            <img src={logoBravo} alt="Bravo Segurança - Logo" className="h-14 sm:h-16 md:h-20 lg:h-16 w-auto" />
+            <img src={logoBravo} alt="Bravo - Logo" className="h-14 sm:h-16 md:h-20 lg:h-16 w-auto" />
             <div className="hidden lg:block text-foreground">
               <span className="font-heading font-bold text-lg">Bravo</span>
             </div>

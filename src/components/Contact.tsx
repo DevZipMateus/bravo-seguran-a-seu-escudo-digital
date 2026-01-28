@@ -139,7 +139,7 @@ export function Contact() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Bravo Segurança - R. França, 169, Dois Irmãos, RS"
+              title="Localização Bravo - R. França, 169, Dois Irmãos, RS"
             />
           </div>
         </div>
