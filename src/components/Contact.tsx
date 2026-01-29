@@ -100,7 +100,7 @@ export function Contact() {
                   <span className="text-xs sm:text-sm">@bravo.ltda</span>
                 </a>
                 <a 
-                  href="https://facebook.com/bravoservices"
+                  href="https://www.facebook.com/Segbravo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 sm:gap-3 text-muted-foreground hover:text-primary transition-colors"
