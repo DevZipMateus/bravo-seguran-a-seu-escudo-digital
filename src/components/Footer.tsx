@@ -123,8 +123,8 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://facebook.com/bravoservices" 
-                  target="_blank" 
+                  href="https://www.facebook.com/Segbravo" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 sm:gap-3 text-primary-foreground/80 hover:text-accent transition-colors text-xs sm:text-sm"
                 >
