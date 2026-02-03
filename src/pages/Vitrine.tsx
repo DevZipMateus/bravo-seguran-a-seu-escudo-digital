@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 
 const Vitrine = () => {
+  const [headerHeight, setHeaderHeight] = useState<number>(88);
+
   useEffect(() => {
     // Lock page scroll
     document.body.style.overflow = 'hidden';
@@ -26,15 +28,37 @@ const Vitrine = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const headerEl = document.querySelector('header') as HTMLElement | null;
+    if (!headerEl) return;
+
+    const update = () => {
+      const next = Math.round(headerEl.getBoundingClientRect().height);
+      if (Number.isFinite(next) && next > 0) setHeaderHeight(next);
+    };
+
+    update();
+
+    const ro = new ResizeObserver(() => update());
+    ro.observe(headerEl);
+    window.addEventListener('resize', update);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', update);
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden flex flex-col">
+    <div className="fixed inset-0 w-full h-[100dvh] overflow-hidden">
       {/* Header */}
       <Header />
-      
-      {/* Iframe - ocupa todo o espaço abaixo do header */}
-      <iframe 
+
+      {/* Iframe - fixa e ocupa todo o espaço restante abaixo do header (altura real medida) */}
+      <iframe
         src="https://beckeredelimavaz.egestor.com.br/vitrine/"
-        className="flex-1 w-full border-none mt-[72px] sm:mt-[80px] md:mt-[88px]"
+        className="fixed left-0 right-0 bottom-0 w-full border-none"
+        style={{ top: headerHeight }}
         title="Demonstração de Vitrine"
       />
     </div>
