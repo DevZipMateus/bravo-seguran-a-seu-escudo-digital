@@ -27,21 +27,16 @@ const Vitrine = () => {
   }, []);
 
   return (
-    <div className="min-h-screen w-full overflow-hidden flex flex-col">
+    <div className="fixed inset-0 w-full h-full overflow-hidden flex flex-col">
       {/* Header */}
       <Header />
       
-      {/* Spacer para compensar o header fixo */}
-      <div className="flex-shrink-0 h-[72px] sm:h-[80px] md:h-[88px]" />
-      
-      {/* Iframe - ocupa o restante da tela */}
-      <div className="flex-1 w-full h-[calc(100vh-72px)] sm:h-[calc(100vh-80px)] md:h-[calc(100vh-88px)]">
-        <iframe 
-          src="https://beckeredelimavaz.egestor.com.br/vitrine/"
-          className="w-full h-full border-none"
-          title="Demonstração de Vitrine"
-        />
-      </div>
+      {/* Iframe - ocupa todo o espaço abaixo do header */}
+      <iframe 
+        src="https://beckeredelimavaz.egestor.com.br/vitrine/"
+        className="flex-1 w-full border-none mt-[72px] sm:mt-[80px] md:mt-[88px]"
+        title="Demonstração de Vitrine"
+      />
     </div>
   );
 };
